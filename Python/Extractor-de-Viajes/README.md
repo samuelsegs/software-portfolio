@@ -42,13 +42,13 @@ ejecutar el proceso.
 ---
 
 ## Estructura del proyecto
-
+```
 Extractor-Viajes-PDF/
 ├── ExtraerViajes.py
 ├── assets/
 │ └── logo.png
 └── README.md
-
+```
 ---
 
 ## Caso de uso
