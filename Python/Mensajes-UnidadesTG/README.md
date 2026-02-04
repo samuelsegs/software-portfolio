@@ -84,3 +84,14 @@ y no incluye credenciales, sesiones ni datos reales.
 
 Este repositorio tiene fines exclusivamente demostrativos y académicos.
 No representa un sistema productivo ni contiene información confidencial.
+
+## Limitaciones y posibles mejoras
+
+Este proyecto fue desarrollado para un entorno operativo específico,
+utilizando archivos estructurados (ODS/CSV) como fuente de datos,
+lo cual permitió una implementación rápida y accesible para usuarios
+no técnicos.
+
+Como mejora futura, el sistema podría evolucionar hacia una arquitectura
+basada en base de datos relacional, permitiendo mayor escalabilidad,
+centralización de la información y control de acceso.
