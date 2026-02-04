@@ -5,10 +5,10 @@ Aquí presento proyectos desarrollados en distintos lenguajes de programación, 
 lógica de programación.
 
 ## Tecnologías
-- Python
-- Java
-- C / C++
-- HTML
+- [Python](./Python/)
+- [Java](./JAVA/)
+- [C_C++](./C_C++/)
+- [HTML](./HTML/)
 
 ## Estructura del repositorio
 Cada carpeta corresponde a un lenguaje de programación y contiene uno o más proyectos
