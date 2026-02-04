@@ -9,7 +9,7 @@ lógica de programación.
 | Lenguaje | Descripción |
 |--------|------------|
 | [Python](./Python/) | Automatización y scripts |
-| [Java](./Java/) | Programación orientada a objetos |
+| [Java](./JAVA/) | Programación orientada a objetos |
 | [C / C++](./C_CPP/) | Fundamentos y bajo nivel |
 | [HTML](./HTML/) | Estructura básica web |
 
