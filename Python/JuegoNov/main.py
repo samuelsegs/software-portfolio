@@ -198,6 +198,7 @@ while running:
             SPRITE_W,
             SPRITE_H
         ))
+        "speed": random.choice([-2, -1, 1, 2])
 
     # Estados emocionales
     estado_empleado = "happy" if level <= 2 else "sad" if level <= 4 else "run"
@@ -210,10 +211,12 @@ while running:
     if space_pressed:
         beam = pygame.Rect(player.centerx - 2, player.bottom, 4, HEIGHT)
         for t in targets[:]:
-            if beam.colliderect(t):
-                targets.remove(t)
-                score += 1
-                current += 1
+            t["rect"].x +=t["speed"]
+            # rebotes en los bordes
+            if t["rect"].left <= 0 or t["rect"].right > WIDTH:
+                t["speed"] *= -1
+
+            screen.blit(sprite.image, t["rect"])
 
     # Timer
     timer -= 1 / FPS
