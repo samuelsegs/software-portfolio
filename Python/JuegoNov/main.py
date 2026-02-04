@@ -121,15 +121,27 @@ clock = pygame.time.Clock()
 # SPRITES
 # =========================
 empleado_sprites = {
-    "run": AnimatedSprite("assets/empleado/run.png", 64, 64, 4, fps=8),
-    "happy": AnimatedSprite("assets/empleado/happy.png", 64, 64, 2, fps=4),
-    "sad": AnimatedSprite("assets/empleado/sad.png", 64, 64, 2, fps=3),
+    "run": AnimatedSprite(
+        os.path.join(ASSETS_DIR, "empleado", "run.png"), 64, 64, 4, fps=8
+    ),
+    "happy": AnimatedSprite(
+        os.path.join(ASSETS_DIR, "empleado", "happy.png"), 64, 64, 2, fps=4
+    ),
+    "sad": AnimatedSprite(
+        os.path.join(ASSETS_DIR, "empleado", "sad.png"), 64, 64, 2, fps=3
+    ),
 }
 
 jefe_sprites = {
-    "happy": pygame.image.load("assets/jefe/happy.png").convert_alpha(),
-    "sad": pygame.image.load("assets/jefe/sad.png").convert_alpha(),
-    "angry": pygame.image.load("assets/jefe/angry.png").convert_alpha(),
+    "happy": pygame.image.load(
+        os.path.join(ASSETS_DIR, "jefe", "happy.png")
+    ).convert_alpha(),
+    "sad": pygame.image.load(
+        os.path.join(ASSETS_DIR, "jefe", "sad.png")
+    ).convert_alpha(),
+    "angry": pygame.image.load(
+        os.path.join(ASSETS_DIR, "jefe", "angry.png")
+    ).convert_alpha(),
 }
 
 ovni = pygame.image.load("assets/jefe/angry.png").convert_alpha()
