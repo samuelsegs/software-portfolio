@@ -1,4 +1,4 @@
-# Software Portfolio – Samuel Segura
+# Portfolio – Samuel Segura
 
 Este repositorio contiene mi portafolio técnico orientado al área de Tecnologías de la Información (TI).
 Aquí presento proyectos desarrollados en distintos lenguajes de programación, enfocados en automatización,
