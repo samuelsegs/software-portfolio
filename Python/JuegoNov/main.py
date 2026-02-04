@@ -25,8 +25,20 @@ GRASS_GREEN = (0, 100, 0)
 # CLASE SPRITE ANIMADO
 # =========================
 class AnimatedSprite:
-    def __init__(self, path, frame_width, frame_height, frames, fps=6):
+    def __init__(self, path, frames, fps=6):
         self.sheet = pygame.image.load(path).convert_alpha()
+
+        sheet_width, sheet_height = self.sheet.get_size()
+
+        if sheet_width % frames != 0:
+            raise ValueError(
+                f"El sprite {path} no es divisible entre {frames} frames.\n"
+                f"Ancho imagen: {sheet_width}"
+            )
+
+        self.frame_width = sheet_width // frames
+        self.frame_height = sheet_height
+
         self.frames = []
         self.index = 0
         self.last_update = pygame.time.get_ticks()
@@ -34,7 +46,7 @@ class AnimatedSprite:
 
         for i in range(frames):
             frame = self.sheet.subsurface(
-                (i * frame_width, 0, frame_width, frame_height)
+                (i * self.frame_width, 0, self.frame_width, self.frame_height)
             )
             self.frames.append(frame)
 
