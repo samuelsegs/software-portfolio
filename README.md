@@ -10,7 +10,7 @@ lógica de programación.
 |--------|------------|
 | [Python](./Python/) | Automatización y scripts |
 | [Java](./JAVA/) | Programación orientada a objetos |
-| [C / C++](./C_CPP/) | Fundamentos y bajo nivel |
+| [C / C++](./C_C++/) | Fundamentos y bajo nivel |
 | [HTML](./HTML/) | Estructura básica web |
 
 ## Estructura del repositorio
