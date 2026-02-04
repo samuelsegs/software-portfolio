@@ -89,7 +89,7 @@ status_label.pack(pady=20)
 
 # Función para cerrar la ventana al hacer clic en "Aceptar"
 def close_window():
-    root.quit()  # Esto cerrará la ventana
+    root.quit() 
 
 # Botón de "Aceptar" que cerrará la aplicación
 accept_button = tk.Button(frame, text="Aceptar", command=close_window, bg="#BE3144", fg="white", font=("Helvetica", 12))
