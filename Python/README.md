@@ -11,14 +11,14 @@ Esta sección contiene proyectos desarrollados en Python, enfocados en automatiz
 
 ## Índice de proyectos
 
-### 📌 Mensajes-UnidadesTG
+### 1.- Mensajes-UnidadesTG
 Sistema de automatización para el envío de mensajes informativos a unidades operativas mediante WhatsApp Web.
 
 - [Ver proyecto](./Mensajes-UnidadesTG)
 
 ---
 
-### 📌 Extractor-Viajes-PDF
+### 2.- Extractor-Viajes-PDF
 Herramienta para la extracción y transformación de información logística desde archivos PDF hacia formato ODS.
 
 - [Ver proyecto](./Extractor-Viajes-PDF)
