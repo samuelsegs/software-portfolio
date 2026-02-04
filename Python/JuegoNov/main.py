@@ -191,14 +191,16 @@ while running:
     player.clamp_ip(screen.get_rect())
 
     # Spawnear empleados
-    if random.randint(0, 45) == 0:
-        targets.append(pygame.Rect(
-            random.randint(0, SPRITE_W),
-            HEIGHT - SPRITE_H - grass.height,
-            SPRITE_W,
-            SPRITE_H
-        ))
-        "speed": random.choice([-2, -1, 1, 2])
+    speed = random.choice([-2, -1, 1, 2])
+    targets.append({
+    "rect": pygame.Rect(
+        random.randint(0, WIDTH - SPRITE_W),
+        HEIGHT - SPRITE_H - grass.height,
+        SPRITE_W,
+        SPRITE_H
+    ),
+    "speed": speed
+})
 
     # Estados emocionales
     estado_empleado = "happy" if level <= 2 else "sad" if level <= 4 else "run"
