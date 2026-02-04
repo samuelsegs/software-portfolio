@@ -7,7 +7,7 @@ import os
 import sys
 from tkinter import Tk
 
-# Función para extraer los datos del PDF
+# extraer los datos del PDF
 def extract_data_from_pdf(pdf_path):
     data = []
     with pdfplumber.open(pdf_path) as pdf:
@@ -56,19 +56,19 @@ def open_file():
 root = tk.Tk()
 root.title("Extraer Datos de Viajes")
 
-# Establecer el tamaño de la ventana
+# tamaño de la ventana
 root.geometry("600x400")
 
 # Configurar los colores de fondo y el tema de la ventana
 root.configure(bg="#09122c")
 
-# Crear un marco con fondo azul para un estilo hitech
+# Crear un marco
 frame = tk.Frame(root, bg="#872341")
 frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-# Cargar la imagen del logo y redimensionarla a 100x50
-logo_img = Image.open("logo.png")  # Asegúrate de tener un archivo logo.png
-logo_img = logo_img.resize((280, 45))  # Redimensionamos a 300x60
+# Cargar la imagen del logo
+logo_img = Image.open("logo.png")  
+logo_img = logo_img.resize((280, 45))  # Redimensionamos a 280x45
 logo_resized = ImageTk.PhotoImage(logo_img)
 
 # Crear un Label para mostrar la imagen de título
