@@ -136,6 +136,8 @@ empleado_sprites = {
     "happy": AnimatedSprite(os.path.join(ASSETS, "empleado", "happy.png"), 2, fps=4),
     "sad": AnimatedSprite(os.path.join(ASSETS, "empleado", "sad.png"), 2, fps=3),
 }
+SPRITE_W = empleado_sprites["run"].frame_width
+SPRITE_H = empleado_sprites["run"].frame_height
 
 jefe_sprites = {
     "happy": pygame.image.load(os.path.join(ASSETS, "jefe", "happy.png")).convert_alpha(),
@@ -191,9 +193,10 @@ while running:
     # Spawnear empleados
     if random.randint(0, 45) == 0:
         targets.append(pygame.Rect(
-            random.randint(0, WIDTH - 64),
-            HEIGHT - 64,
-            64, 64
+            random.randint(0, SPRITE_W),
+            HEIGHT - SPRITE_H - grass.height,
+            SPRITE_W,
+            SPRITE_H
         ))
 
     # Estados emocionales
