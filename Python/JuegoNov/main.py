@@ -3,46 +3,39 @@ import random
 import sys
 import os
 
-# =========================
-# RUTAS SEGURAS
-# =========================
+# ==================================================
+# RUTAS
+# ==================================================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(BASE_DIR, "assets")
 
-# =========================
-# CONFIGURACIÓN GENERAL
-# =========================
+# ==================================================
+# CONFIGURACIÓN
+# ==================================================
 WIDTH, HEIGHT = 800, 600
 FPS = 60
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-RED = (200, 0, 0)
 YELLOW = (255, 255, 0)
-GRASS_GREEN = (0, 100, 0)
+GRASS_GREEN = (0, 110, 0)
 
-# =========================
+# ==================================================
 # CLASE SPRITE ANIMADO (ROBUSTA)
-# =========================
+# ==================================================
 class AnimatedSprite:
     def __init__(self, path, frames, fps=6):
         self.sheet = pygame.image.load(path).convert_alpha()
+        sheet_w, sheet_h = self.sheet.get_size()
 
-        sheet_width, sheet_height = self.sheet.get_size()
-
-        if sheet_width % frames != 0:
+        if sheet_w % frames != 0:
             raise ValueError(
-                f"Sprite mal exportado: {path}\n"
-                f"Ancho {sheet_width} no divisible entre {frames} frames"
+                f"Sprite mal exportado: {path} ({sheet_w}px no divisible entre {frames})"
             )
 
-        self.frame_width = sheet_width // frames
-        self.frame_height = sheet_height
-
+        self.frame_width = sheet_w // frames
+        self.frame_height = sheet_h
         self.frames = []
-        self.index = 0
-        self.last_update = pygame.time.get_ticks()
-        self.delay = 1000 // fps
 
         for i in range(frames):
             frame = self.sheet.subsurface(
@@ -50,7 +43,10 @@ class AnimatedSprite:
             )
             self.frames.append(frame)
 
+        self.index = 0
         self.image = self.frames[0]
+        self.last_update = pygame.time.get_ticks()
+        self.delay = 1000 // fps
 
     def update(self):
         now = pygame.time.get_ticks()
@@ -59,14 +55,14 @@ class AnimatedSprite:
             self.index = (self.index + 1) % len(self.frames)
             self.image = self.frames[self.index]
 
-# =========================
+# ==================================================
 # PANTALLA DE INICIO
-# =========================
+# ==================================================
 def start_screen(screen):
     font = pygame.font.Font(None, 28)
     screen.fill(BLACK)
 
-    text = [
+    lines = [
         "TRESGÜERAS: OPERACIÓN CHIVO EXPIATORIO",
         "",
         "Tepotzotlán, Estado de México - 6:00 AM",
@@ -80,17 +76,17 @@ def start_screen(screen):
         "\"Para el viernes quiero UN nombre.\"",
         "\"O será el tuyo.\"",
         "",
-        "FLECHAS  - Mover OVNI",
-        "ESPACIO  - Rayo de Baja Justificada",
+        "FLECHAS  - Mover nave",
+        "ESPACIO  - Rayo de baja justificada",
         "",
         "Presiona cualquier tecla para comenzar..."
     ]
 
     y = 80
-    for line in text:
-        render = font.render(line, True, WHITE)
-        rect = render.get_rect(center=(WIDTH // 2, y))
-        screen.blit(render, rect)
+    for line in lines:
+        txt = font.render(line, True, WHITE)
+        rect = txt.get_rect(center=(WIDTH // 2, y))
+        screen.blit(txt, rect)
         y += 30
 
     pygame.display.flip()
@@ -98,58 +94,63 @@ def start_screen(screen):
 
 def wait_for_key():
     while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+        for e in pygame.event.get():
+            if e.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-            if event.type == pygame.KEYDOWN:
+            if e.type == pygame.KEYDOWN:
                 return
 
-# =========================
+# ==================================================
 # GAME OVER
-# =========================
+# ==================================================
 def game_over(screen, score):
     font = pygame.font.Font(None, 48)
     screen.fill(BLACK)
 
-    screen.blit(font.render("GAME OVER", True, RED),
-                (WIDTH // 2 - 120, HEIGHT // 3))
+    screen.blit(font.render("GAME OVER", True, (200, 0, 0)),
+                (WIDTH // 2 - 130, HEIGHT // 3))
     screen.blit(font.render(f"Puntaje final: {score}", True, WHITE),
-                (WIDTH // 2 - 160, HEIGHT // 2))
+                (WIDTH // 2 - 170, HEIGHT // 2))
 
     pygame.display.flip()
     wait_for_key()
 
-# =========================
-# INICIAR PYGAME
-# =========================
+# ==================================================
+# INIT PYGAME
+# ==================================================
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Operación Chivo Expiatorio")
 clock = pygame.time.Clock()
 
-# =========================
+# ==================================================
 # CARGA DE SPRITES
-# =========================
+# ==================================================
 empleado_sprites = {
     "run": AnimatedSprite(os.path.join(ASSETS, "empleado", "run.png"), 4, fps=8),
     "happy": AnimatedSprite(os.path.join(ASSETS, "empleado", "happy.png"), 2, fps=4),
     "sad": AnimatedSprite(os.path.join(ASSETS, "empleado", "sad.png"), 2, fps=3),
 }
+
 SPRITE_W = empleado_sprites["run"].frame_width
 SPRITE_H = empleado_sprites["run"].frame_height
 
-jefe_sprites = {
-    "happy": pygame.image.load(os.path.join(ASSETS, "jefe", "happy.png")).convert_alpha(),
-    "sad": pygame.image.load(os.path.join(ASSETS, "jefe", "sad.png")).convert_alpha(),
-    "angry": pygame.image.load(os.path.join(ASSETS, "jefe", "angry.png")).convert_alpha(),
-}
+# Nave (jugador) – fija
+ovni_img = pygame.image.load(
+    os.path.join(ASSETS, "jefe", "novel.png")
+).convert_alpha()
+ovni_img = pygame.transform.scale(ovni_img, (64, 64))
 
-ovni = pygame.transform.scale(jefe_sprites["angry"], (50, 50))
+# Jefe fijo (HUD)
+jefe_img = pygame.image.load(
+    os.path.join(ASSETS, "jefe", "novel.png")
+).convert_alpha()
+jefe_img = pygame.transform.scale(jefe_img, (40, 40))
 
-# =========================
+# ==================================================
 # VARIABLES DE JUEGO
-# =========================
+# ==================================================
 player = pygame.Rect(WIDTH // 2 - 25, 10, 50, 50)
 player_speed = 5
 
@@ -165,24 +166,24 @@ space_pressed = False
 
 grass = pygame.Rect(0, HEIGHT - 40, WIDTH, 40)
 
-# =========================
+# ==================================================
 # INICIO
-# =========================
+# ==================================================
 start_screen(screen)
 running = True
 
-# =========================
+# ==================================================
 # LOOP PRINCIPAL
-# =========================
+# ==================================================
 while running:
     clock.tick(FPS)
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+    for e in pygame.event.get():
+        if e.type == pygame.QUIT:
             running = False
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+        elif e.type == pygame.KEYDOWN and e.key == pygame.K_SPACE:
             space_pressed = True
-        if event.type == pygame.KEYUP and event.key == pygame.K_SPACE:
+        elif e.type == pygame.KEYUP and e.key == pygame.K_SPACE:
             space_pressed = False
 
     keys = pygame.key.get_pressed()
@@ -190,37 +191,40 @@ while running:
     player.y += (keys[pygame.K_DOWN] - keys[pygame.K_UP]) * player_speed
     player.clamp_ip(screen.get_rect())
 
-    # Spawnear empleados
-    speed = random.choice([-2, -1, 1, 2])
-    targets.append({
-    "rect": pygame.Rect(
-        random.randint(0, WIDTH - SPRITE_W),
-        HEIGHT - SPRITE_H - grass.height,
-        SPRITE_W,
-        SPRITE_H
-    ),
-    "speed": speed
-})
+    # Spawn de empleados
+    if random.randint(0, 45) == 0 and len(targets) < 8:
+        speed = random.choice([-2, -1, 1, 2])
+        targets.append({
+            "rect": pygame.Rect(
+                random.randint(0, WIDTH - SPRITE_W),
+                HEIGHT - SPRITE_H - grass.height,
+                SPRITE_W,
+                SPRITE_H
+            ),
+            "speed": speed
+        })
 
-    # Estados emocionales
+    # Estado emocional del empleado (por nivel)
     estado_empleado = "happy" if level <= 2 else "sad" if level <= 4 else "run"
-    estado_jefe = "angry" if timer < 15 else "sad" if current < goal // 2 else "happy"
-
     sprite = empleado_sprites[estado_empleado]
     sprite.update()
+
+    # Movimiento empleados
+    for t in targets[:]:
+        t["rect"].x += t["speed"]
+        if t["rect"].left <= 0 or t["rect"].right >= WIDTH:
+            t["speed"] *= -1
 
     # Rayo
     if space_pressed:
         beam = pygame.Rect(player.centerx - 2, player.bottom, 4, HEIGHT)
         for t in targets[:]:
-            t["rect"].x +=t["speed"]
-            # rebotes en los bordes
-            if t["rect"].left <= 0 or t["rect"].right > WIDTH:
-                t["speed"] *= -1
+            if beam.colliderect(t["rect"]):
+                targets.remove(t)
+                score += 1
+                current += 1
 
-            screen.blit(sprite.image, t["rect"])
-
-    # Timer
+    # Timer / niveles
     timer -= 1 / FPS
     if timer <= 0:
         if current < goal:
@@ -231,24 +235,26 @@ while running:
         goal += 10
         timer = 60
 
-    # =========================
+    # ==================================================
     # DIBUJO
-    # =========================
+    # ==================================================
     screen.fill(BLACK)
     pygame.draw.rect(screen, GRASS_GREEN, grass)
 
-    screen.blit(ovni, player)
+    screen.blit(ovni_img, player)
 
     for t in targets:
-        screen.blit(sprite.image, t)
+        screen.blit(sprite.image, t["rect"])
 
     if space_pressed:
-        pygame.draw.line(screen, YELLOW,
-                         (player.centerx, player.bottom),
-                         (player.centerx, HEIGHT), 2)
+        pygame.draw.line(
+            screen, YELLOW,
+            (player.centerx, player.bottom),
+            (player.centerx, HEIGHT), 2
+        )
 
-    screen.blit(jefe_sprites[estado_jefe], (WIDTH - 110, 10))
-
+    # HUD
+    screen.blit(jefe_img, (WIDTH - 80, 10))
     screen.blit(font.render(f"Nivel: {level}", True, WHITE), (10, 10))
     screen.blit(font.render(f"Puntaje: {score}", True, WHITE), (10, 40))
     screen.blit(font.render(f"Tiempo: {int(timer)}", True, WHITE), (10, 70))
