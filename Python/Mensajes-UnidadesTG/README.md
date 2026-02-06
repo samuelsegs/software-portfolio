@@ -83,7 +83,7 @@ y no incluye credenciales, sesiones ni datos reales.
 ## Nota importante
 
 Este repositorio tiene fines exclusivamente demostrativos y académicos.
-No representa un sistema productivo ni contiene información confidencial.
+no contiene información confidencial.
 
 ## Limitaciones y posibles mejoras
 
