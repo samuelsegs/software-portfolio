@@ -1,5 +1,6 @@
 ## Juego 
----
-con referencia al codigo proporcionado por: 
+
+Con referencia al codigo proporcionado por: 
+
 
 
