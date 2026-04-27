@@ -10,7 +10,7 @@ lógica de programación.
 |--------|------------|
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=Python)](./Python/) | Automatización y scripts |
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=Java)](./Java/)| Programación orientada a objetos |
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=C+C%2B%2B)](./C_C++/)(./C_C++/)| Fundamentos y bajo nivel |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=C+C%2B%2B)](./C_C++/)| Fundamentos y bajo nivel |
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=HTML)](./HTML/) | Estructura básica web |
 
 ## Estructura del repositorio
