@@ -1,4 +1,4 @@
-#[![Typing SVG](https://readme-typing-svg.demolab.com?font=Ubuntu&pause=1000&width=435&lines=Portfolio+%E2%80%93+Samuel+Segura+Silverio)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=Portfolio+%E2%80%93+Samuel+Segura+Silverio)](https://git.io/typing-svg)
 
 Este repositorio contiene mi portafolio técnico orientado al área de Tecnologías de la Información (TI).
 Aquí presento proyectos desarrollados en distintos lenguajes de programación, enfocados en automatización,
@@ -8,7 +8,7 @@ lógica de programación.
 
 | Lenguaje | Descripción |
 |--------|------------|
-| [Python](./Python/) | Automatización y scripts |
+| [[![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=Python)](https://git.io/typing-svg)](./Python/) | Automatización y scripts |
 | [Java](./JAVA/) | Programación orientada a objetos |
 | [C / C++](./C_C++/) | Fundamentos y bajo nivel |
 | [HTML](./HTML/) | Estructura básica web |
