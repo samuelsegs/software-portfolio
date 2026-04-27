@@ -1,4 +1,4 @@
-# Portfolio – Samuel Segura
+#[![Typing SVG](https://readme-typing-svg.demolab.com?font=Ubuntu&pause=1000&width=435&lines=Portfolio+%E2%80%93+Samuel+Segura+Silverio)](https://git.io/typing-svg)
 
 Este repositorio contiene mi portafolio técnico orientado al área de Tecnologías de la Información (TI).
 Aquí presento proyectos desarrollados en distintos lenguajes de programación, enfocados en automatización,
