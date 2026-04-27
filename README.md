@@ -4,14 +4,14 @@ Este repositorio contiene mi portafolio técnico orientado al área de Tecnolog�
 Aquí presento proyectos desarrollados en distintos lenguajes de programación, enfocados en automatización,
 lógica de programación.
 
-## Tecnologías
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&height=47&lines=Tecnolog%C3%ADas)]
 
 | Lenguaje | Descripción |
 |--------|------------|
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=Python)](./Python/) | Automatización y scripts |
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=Java)](./Java/)| Programación orientada a objetos |
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=C_C++)](./C_C++/)| Fundamentos y bajo nivel |
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=HTML)](./HTML/) | Estructura básica web |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=Python)](./Python/) | Automatización y scripts |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=Java)](./Java/)| Programación orientada a objetos |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=C+C%2B%2B)](https://git.io/typing-svg)(./C_C++/)| Fundamentos y bajo nivel |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=435&lines=HTML)](./HTML/) | Estructura básica web |
 
 ## Estructura del repositorio
 Cada carpeta corresponde a un lenguaje de programación y contiene uno o más proyectos
