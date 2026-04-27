@@ -8,10 +8,10 @@ lógica de programación.
 
 | Lenguaje | Descripción |
 |--------|------------|
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=100&lines=Python)](./Python/) | Automatización y scripts |
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=100&lines=Java)](./Java/)| Programación orientada a objetos |
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=100&lines=C+C%2B%2B)](./C_C++/)| Fundamentos y bajo nivel |
-| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=100&lines=HTML)](./HTML/) | Estructura básica web |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=47F704&width=100&height=30&lines=python)](./Python/) | Automatización y scripts |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=47F704&width=100&height=30&lines=Java)](./Java/)| Programación orientada a objetos |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=47F704&width=100&height=30&lines=C+C%2B%2B)](./C_C++/)| Fundamentos y bajo nivel |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=47F704&width=100&height=30&lines=HTML)](./HTML/) | Estructura básica web |
 
 ## Estructura del repositorio
 Cada carpeta corresponde a un lenguaje de programación y contiene uno o más proyectos
