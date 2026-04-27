@@ -8,7 +8,7 @@ lógica de programación.
 
 | Lenguaje | Descripción |
 |--------|------------|
-| [[![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=Python)](https://git.io/typing-svg)](./Python/) | Automatización y scripts |
+| [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&width=435&lines=Python)](./Python/)] | Automatización y scripts |
 | [Java](./JAVA/) | Programación orientada a objetos |
 | [C / C++](./C_C++/) | Fundamentos y bajo nivel |
 | [HTML](./HTML/) | Estructura básica web |
