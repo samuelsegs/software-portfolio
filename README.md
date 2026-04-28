@@ -18,7 +18,7 @@ lógica de programación.
 Cada carpeta corresponde a un lenguaje de programación y contiene uno o más proyectos
 con su respectiva documentación.
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=2563EB&width=310&height=30&lines=Objetivo)]()
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=2563EB&width=100&height=30&lines=Objetivo)]()
 Mostrar habilidades técnicas, capacidad de análisis y enfoque en la mejora de procesos
 mediante el uso de software.
 
