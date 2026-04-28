@@ -12,6 +12,8 @@ lógica de programación.
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=10B981&width=100&height=30&lines=Java)](./Java/)| Programación orientada a objetos |
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=10B981&width=100&height=30&lines=C+C%2B%2B)](./C_C++/)| Fundamentos y bajo nivel |
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira=Code&size=15&pause=1000&color=10B981&width=100&height=30&lines=HTML)](./HTML/) | Estructura básica web |
+
+
 ---
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=B8EBF7&width=310&height=30&lines=Estructura+del+repositorio)]()
 
