@@ -13,7 +13,8 @@ lógica de programación.
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1000&color=10B981&width=100&height=30&lines=C+C%2B%2B)](./C_C++/)| Fundamentos y bajo nivel |
 | [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira=Code&size=15&pause=1000&color=10B981&width=100&height=30&lines=HTML)](./HTML/) | Estructura básica web |
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=60A5FA&width=435&lines=Estructura+del+repositorio)]()
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Montserrat&pause=1000&color=B8EBF7&width=310&height=30&lines=Estructura+del+repositorio)]()
+
 Cada carpeta corresponde a un lenguaje de programación y contiene uno o más proyectos
 con su respectiva documentación.
 
